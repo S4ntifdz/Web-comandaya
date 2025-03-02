@@ -32,6 +32,13 @@ h6 {
     width: 120%;
     height: auto;
 }
+
+@media all and (max-width: 768px) {
+    .enlarged-image {
+        width: 100%; /* Ajusta el tamaño de la imagen para dispositivos móviles */
+		margin-bottom: 20
+    }
+}
 .navbar {
 	position: fixed;
 	right: 0;
@@ -71,6 +78,12 @@ h6 {
   }
   .back {
 	transform: rotateY(180deg);
+  }
+
+@media (max-width: 768px) {
+	.flipper {
+	  height: 200px;
+	}
   }
 .navbar .nav-item {
 	margin: 0 5px;
