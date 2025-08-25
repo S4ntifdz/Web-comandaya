@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo - GastroQR</title>
+  <link rel="icon" href="images/celular/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container"> 
+      <a class="navbar-brand navbar-logo" href="index.html"> 
+        <img src="images/celular/invertidoGASTRO-removebg-preview.png" alt="logo" class="logo-1"> 
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+        <span class="fas fa-bars"></span> 
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="pricing.html">Precios</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="index.html#contact">Contacto</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Demo Form Section -->
+  <section class="demo-form-section section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="demo-form-container">
+            <div class="sectioner-header text-center">
+              <h2>¡Probá GastroQR gratis!</h2>
+              <span class="line"></span>
+              <p>Completá el formulario y te contactaremos para configurar tu demo personalizada</p>
+            </div>
+            
+            <form id="demo_form" class="demo-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="restaurante">Nombre del restaurante *</label>
+                    <input type="text" id="restaurante" name="restaurante" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="tipo_negocio">Tipo de negocio</label>
+                    <select id="tipo_negocio" name="tipo_negocio" class="form-control">
+                      <option value="">Seleccionar...</option>
+                      <option value="restaurante">Restaurante</option>
+                      <option value="bar">Bar</option>
+                      <option value="cafeteria">Cafetería</option>
+                      <option value="food_truck">Food Truck</option>
+                      <option value="parrilla">Parrilla</option>
+                      <option value="pizzeria">Pizzería</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="cantidad_mesas">Cantidad de mesas aproximada</label>
+                    <select id="cantidad_mesas" name="cantidad_mesas" class="form-control">
+                      <option value="">Seleccionar...</option>
+                      <option value="1-5">1 a 5 mesas</option>
+                      <option value="6-15">6 a 15 mesas</option>
+                      <option value="16-30">16 a 30 mesas</option>
+                      <option value="30+">Más de 30 mesas</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="ubicacion">Ubicación del local</label>
+                <input type="text" id="ubicacion" name="ubicacion" class="form-control" placeholder="Ciudad, Provincia">
+              </div>
+              
+              <div class="form-group">
+                <label for="comentarios">¿Qué te interesa más de GastroQR?</label>
+                <textarea id="comentarios" name="comentarios" class="form-control" rows="4" 
+                  placeholder="Contanos qué funcionalidades te interesan más o si tenés alguna pregunta específica..."></textarea>
+              </div>
+              
+              <div class="form-group">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="acepto_terminos" name="acepto_terminos" required>
+                  <label class="form-check-label" for="acepto_terminos">
+                    Acepto recibir información comercial y acepto los términos y condiciones *
+                  </label>
+                </div>
+              </div>
+              
+              <div class="text-center">
+                <button type="submit" class="btn-grad">Solicitar Demo Gratuita</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="demo-benefits section-padding" style="background: #f8f9fa;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>¿Qué incluye tu demo?</h3>
+            <span class="line"></span>
+          </div>
+          <div class="section-content">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="benefit-box">
+                  <i class="fas fa-laptop fa-3x"></i>
+                  <h5>Configuración personalizada</h5>
+                  <p>Adaptamos el sistema a las necesidades específicas de tu negocio</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="benefit-box">
+                  <i class="fas fa-clock fa-3x"></i>
+                  <h5>30 días gratis</h5>
+                  <p>Probá todas las funcionalidades sin compromiso durante un mes completo</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="benefit-box">
+                  <i class="fas fa-headset fa-3x"></i>
+                  <h5>Soporte completo</h5>
+                  <p>Te acompañamos en todo el proceso de implementación y capacitación</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-copy">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <p>2025 <a href="index.html" class="" rel="dofollow"> powered by &copy;QUINOTO</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  
+  <script>
+    $(document).ready(function() {
+      $('#demo_form').on('submit', function(e) {
+        e.preventDefault();
+        
+        // Aquí puedes agregar la lógica para enviar el formulario
+        alert('¡Gracias por tu interés! Te contactaremos pronto para coordinar tu demo.');
+        
+        // Opcional: resetear el formulario
+        this.reset();
+      });
+    });
+
+    $(window).on("scroll", function () {
+      var bodyScroll = $(window).scrollTop(),
+        navbar = $(".navbar");
+
+      if (bodyScroll > 50) {
+        $('.navbar-logo img').attr('src', 'images/celular/Fondo.png');
+        navbar.addClass("nav-scroll");
+      } else {
+        $('.navbar-logo img').attr('src', 'images/celular/invertidoGASTRO-removebg-preview.png');
+        navbar.removeClass("nav-scroll");
+      }
+    });
+  </script>
+</body>
+
+</html>

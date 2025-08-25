@@ -54,7 +54,7 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-12">
-            <div class="flip-container" id="flip-container">
+            <div class="flip-container" id="flip-container" onmouseenter="flipCard()" onmouseleave="unflipCard()">
               <div class="flipper">
                 <div class="front">
                   <img src="images/celular/menu-left.png" class="wow fadeInUp enlarged-image"/>
@@ -118,6 +118,42 @@
     <div class="section-padding video-overlay">
       <div class="container">
         <h3>Un producto de QUINOTO</h3>
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <div class="features-table">
+              <div class="row">
+                <div class="col-md-3 col-sm-6">
+                  <div class="feature-item">
+                    <i class="fas fa-qrcode fa-2x mb-3"></i>
+                    <h5>Códigos QR</h5>
+                    <p>Acceso instantáneo al menú desde cualquier mesa</p>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="feature-item">
+                    <i class="fas fa-mobile-alt fa-2x mb-3"></i>
+                    <h5>App Móvil</h5>
+                    <p>Interfaz optimizada para todos los dispositivos</p>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="feature-item">
+                    <i class="fas fa-chart-line fa-2x mb-3"></i>
+                    <h5>Dashboard</h5>
+                    <p>Control total de ventas y estadísticas en tiempo real</p>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="feature-item">
+                    <i class="fas fa-robot fa-2x mb-3"></i>
+                    <h5>Bot WhatsApp</h5>
+                    <p>Automatización de reservas y atención al cliente</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -206,8 +242,37 @@
           <div class="sectioner-header text-center white">
             <h3>¿Que estas esperando para sumarte?</h3>
             <span class="line"></span>
-            <p class="white">
-            </p>
+            <p class="white">Únete a los cientos de restaurantes que ya transformaron su negocio</p>
+          </div>
+          <div class="section-content text-center">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="benefit-item">
+                  <div class="benefit-number">85%</div>
+                  <h5>Reducción en tiempos de espera</h5>
+                  <p>Los clientes ordenan y pagan sin esperar al mozo</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="benefit-item">
+                  <div class="benefit-number">40%</div>
+                  <h5>Aumento en ventas promedio</h5>
+                  <p>Sugerencias inteligentes incrementan el ticket promedio</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="benefit-item">
+                  <div class="benefit-number">95%</div>
+                  <h5>Satisfacción del cliente</h5>
+                  <p>Experiencia más fluida y moderna</p>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <a href="demo.html" class="demo-btn">¡Ya podés probar la demo!</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -222,11 +287,55 @@
         <div class="col-md-12">
           <div class="sectioner-header text-center">
             
-            <h3> <i class="fas fa-exclamation-triangle fa-lg"></i>	 Pronto podras probar la demo</h3>
+            <h3>Planes y Precios</h3>
             <span class="line"></span>
-            <!-- <p>Algunas de las dudas que mas nos llegan.</p> -->
+            <p>Elige el plan que mejor se adapte a tu negocio</p>
           </div>
           <div class="section-content">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="pricing-card">
+                  <h4>Básico</h4>
+                  <div class="price">$15.000<span>/mes</span></div>
+                  <ul>
+                    <li><i class="fas fa-check"></i> Hasta 5 mesas</li>
+                    <li><i class="fas fa-check"></i> Menú digital</li>
+                    <li><i class="fas fa-check"></i> Pagos QR</li>
+                    <li><i class="fas fa-check"></i> Soporte básico</li>
+                  </ul>
+                  <a href="pricing.html" class="pricing-btn">Elegir Plan</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="pricing-card featured">
+                  <div class="popular-badge">Más Popular</div>
+                  <h4>Profesional</h4>
+                  <div class="price">$25.000<span>/mes</span></div>
+                  <ul>
+                    <li><i class="fas fa-check"></i> Hasta 20 mesas</li>
+                    <li><i class="fas fa-check"></i> Dashboard completo</li>
+                    <li><i class="fas fa-check"></i> Bot WhatsApp</li>
+                    <li><i class="fas fa-check"></i> Reportes avanzados</li>
+                    <li><i class="fas fa-check"></i> Soporte prioritario</li>
+                  </ul>
+                  <a href="pricing.html" class="pricing-btn">Elegir Plan</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="pricing-card">
+                  <h4>Enterprise</h4>
+                  <div class="price">$45.000<span>/mes</span></div>
+                  <ul>
+                    <li><i class="fas fa-check"></i> Mesas ilimitadas</li>
+                    <li><i class="fas fa-check"></i> Múltiples sucursales</li>
+                    <li><i class="fas fa-check"></i> IA personalizada</li>
+                    <li><i class="fas fa-check"></i> Integración completa</li>
+                    <li><i class="fas fa-check"></i> Soporte 24/7</li>
+                  </ul>
+                  <a href="pricing.html" class="pricing-btn">Elegir Plan</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -294,6 +403,23 @@
   <script>
     wow = new WOW();
     wow.init();
+    
+    let isFlipped = false;
+    
+    function flipCard() {
+      if (!isFlipped) {
+        document.getElementById('flip-container').classList.add('flipped');
+        isFlipped = true;
+      }
+    }
+    
+    function unflipCard() {
+      if (isFlipped) {
+        document.getElementById('flip-container').classList.remove('flipped');
+        isFlipped = false;
+      }
+    }
+    
     $(document).ready(function (e) {
 
       $('#video-icon').on('click', function (e) {

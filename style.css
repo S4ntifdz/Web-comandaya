@@ -60,22 +60,35 @@ h6 {
 .flip-container {
 	perspective: 1000px;
 	margin-bottom: 28rem; /* Asegúrate de que el margen inferior esté aplicado aquí */
+	cursor: pointer;
+	width: 100%;
+	height: auto;
   }
   
   .flipper {
 	position: relative;
 	transform-style: preserve-3d;
-	transition: 0.6s;
+	transition: transform 0.6s ease-in-out;
+	transform-origin: center center;
   }
   
-  .flip-container:hover .flipper {
+ .flip-container.flipped .flipper {
 	transform: rotateY(180deg);
   }
   
   .front, .back {
 	position: absolute;
 	backface-visibility: hidden;
+	width: 100%;
+	height: 100%;
   }
+ 
+ .front img, .back img {
+	width: 100%;
+	height: auto;
+	display: block;
+ }
+ 
   .back {
 	transform: rotateY(180deg);
   }
@@ -535,6 +548,361 @@ input {
 .footer-copy p {
 	margin-bottom:0px;
 }
+
+/* Nuevos estilos para features table */
+.features-table {
+	margin-top: 40px;
+}
+
+.feature-item {
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.feature-item i {
+	color: #ffffff;
+	margin-bottom: 15px;
+}
+
+.feature-item h5 {
+	color: #ffffff;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.feature-item p {
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 14px;
+}
+
+/* Estilos para benefit items */
+.benefit-item {
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.benefit-number {
+	font-size: 48px;
+	font-weight: 700;
+	color: #ffffff;
+	margin-bottom: 15px;
+}
+
+.benefit-item h5 {
+	color: #ffffff;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.benefit-item p {
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 14px;
+}
+
+/* Botón demo */
+.demo-btn {
+	display: inline-block;
+	padding: 15px 40px;
+	background: #ffffff;
+	color: #7a60ff;
+	font-weight: 600;
+	font-size: 18px;
+	border-radius: 50px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.demo-btn:hover {
+	background: #f8f9fa;
+	color: #5f0099;
+	text-decoration: none;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para pricing cards */
+.pricing-card {
+	background: #ffffff;
+	border-radius: 15px;
+	padding: 40px 30px;
+	text-align: center;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	margin-bottom: 30px;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.featured {
+	background: linear-gradient(135deg, #7a60ff, #cd9ffa);
+	color: #ffffff;
+	transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+	transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #ff6b6b;
+	color: #ffffff;
+	padding: 8px 20px;
+	border-radius: 20px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.pricing-card h4 {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.pricing-card .price {
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+.pricing-card .price span {
+	font-size: 16px;
+	font-weight: 400;
+	opacity: 0.7;
+}
+
+.pricing-card ul {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 30px;
+}
+
+.pricing-card ul li {
+	padding: 10px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.featured ul li {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pricing-card ul li i {
+	color: #28a745;
+	margin-right: 10px;
+}
+
+.pricing-card.featured ul li i {
+	color: #ffffff;
+}
+
+.pricing-btn {
+	display: inline-block;
+	padding: 12px 30px;
+	background: #7a60ff;
+	color: #ffffff;
+	border-radius: 25px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.pricing-btn:hover {
+	background: #5f0099;
+	color: #ffffff;
+	text-decoration: none;
+	transform: translateY(-2px);
+}
+
+.pricing-card.featured .pricing-btn {
+	background: #ffffff;
+	color: #7a60ff;
+}
+
+.pricing-card.featured .pricing-btn:hover {
+	background: #f8f9fa;
+	color: #5f0099;
+}
+
+/* Estilos para demo form */
+.demo-form-section {
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	min-height: 80vh;
+}
+
+.demo-form-container {
+	background: #ffffff;
+	border-radius: 15px;
+	padding: 50px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+	margin-top: 50px;
+}
+
+.demo-form .form-group {
+	margin-bottom: 25px;
+}
+
+.demo-form label {
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 8px;
+	display: block;
+}
+
+.demo-form .form-control {
+	border: 2px solid #e9ecef;
+	border-radius: 8px;
+	padding: 12px 15px;
+	font-size: 14px;
+	transition: all 0.3s ease;
+}
+
+.demo-form .form-control:focus {
+	border-color: #7a60ff;
+	box-shadow: 0 0 0 0.2rem rgba(122, 96, 255, 0.25);
+}
+
+.demo-form select.form-control {
+	height: auto;
+	padding: 12px 15px;
+}
+
+.demo-form textarea.form-control {
+	resize: vertical;
+	min-height: 100px;
+}
+
+.form-check-label {
+	font-size: 14px;
+	color: #666;
+}
+
+.benefit-box {
+	text-align: center;
+	padding: 30px 20px;
+	background: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+	margin-bottom: 30px;
+	transition: all 0.3s ease;
+}
+
+.benefit-box:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-box i {
+	color: #7a60ff;
+	margin-bottom: 20px;
+}
+
+.benefit-box h5 {
+	font-weight: 600;
+	margin-bottom: 15px;
+	color: #333;
+}
+
+.benefit-box p {
+	color: #666;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+/* Estilos para pricing page */
+.pricing-header {
+	background: linear-gradient(135deg, #7a60ff, #cd9ffa);
+	color: #ffffff;
+	padding: 120px 0 80px;
+}
+
+.pricing-header .sectioner-header h2 {
+	color: #ffffff;
+	font-size: 42px;
+	margin-bottom: 20px;
+}
+
+.pricing-header .sectioner-header p {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 18px;
+}
+
+.pricing-plans {
+	background: #f8f9fa;
+}
+
+.plan-description {
+	color: #666;
+	font-size: 14px;
+	margin-bottom: 25px;
+	font-style: italic;
+}
+
+.pricing-card.featured .plan-description {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.comparison-table {
+	margin-top: 40px;
+}
+
+.comparison-table .table {
+	background: #ffffff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-table .table thead th {
+	background: #7a60ff;
+	color: #ffffff;
+	border: none;
+	padding: 20px 15px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.comparison-table .table tbody td {
+	padding: 15px;
+	text-align: center;
+	border-color: #e9ecef;
+}
+
+.comparison-table .table tbody td:first-child {
+	text-align: left;
+	font-weight: 600;
+	background: #f8f9fa;
+}
+
+.pricing-cta {
+	position: relative;
+}
+
+.pricing-cta::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url(images/pattern.png);
+}
+
+.pricing-cta .container {
+	position: relative;
+	z-index: 2;
+}
+
 @media all and (max-width:991px) {
 .navbar .navbar-collapse {
 	overflow: auto;
@@ -551,6 +919,36 @@ input {
 }
 }
 @media all and (max-width:768px) {
+.demo-form-container {
+	padding: 30px 20px;
+	margin-top: 20px;
+}
+
+.pricing-header {
+	padding: 80px 0 60px;
+}
+
+.pricing-header .sectioner-header h2 {
+	font-size: 28px;
+}
+
+.pricing-card {
+	margin-bottom: 30px;
+}
+
+.benefit-box {
+	margin-bottom: 20px;
+}
+
+.comparison-table {
+	font-size: 12px;
+}
+
+.comparison-table .table thead th,
+.comparison-table .table tbody td {
+	padding: 10px 8px;
+}
+
 .nav-scroll .navbar-brand img, .navbar-brand img {
 	transform: scale(0.75) !important;
 	-webkit-transform: scale(0.75) !important;
